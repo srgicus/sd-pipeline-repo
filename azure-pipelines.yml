@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+steps:
+
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure Service Connection'
+    subscriptionId: '7baa5925-804a-4753-8488-7ebaf146bea8'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'sd-pipeline-rg'
+    location: 'Canada Central'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/srgicus/sd-pipeline-repo/main/create_web_app/azuredeploy.json'
+    deploymentMode: 'Incremental'
