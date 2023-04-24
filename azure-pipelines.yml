@@ -14,10 +14,6 @@ steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Visual Studio(7baa5925-804a-4753-8488-7ebaf146bea8)'
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'Azure Service Connection'
     subscriptionId: '7baa5925-804a-4753-8488-7ebaf146bea8'
     action: 'Create Or Update Resource Group'
