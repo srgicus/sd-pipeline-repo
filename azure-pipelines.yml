@@ -21,6 +21,6 @@ steps:
     location: 'East US'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/srgicus/sd-pipeline-repo/main/create_web_app/azuredeploy.json?token=GHSAT0AAAAAACBX662OT3RLQO2CUN52XAK4ZCEOTOQ'
-    overrideParameters: '-projectName sdpipeline'
+    overrideParameters: '-projectName sd-deployment-repo2'
     deploymentMode: 'Incremental'
     deploymentName: 'Deploy Pipeline Template'
