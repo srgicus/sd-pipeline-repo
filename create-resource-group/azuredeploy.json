@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"resourceGroup": {
+			"type": "string",
+			"defaultValue": "sd-pipeline-rg",
+			"metadata": {
+				"description": "Resource group name - will be created if it doesn't exist"
+			}
+		}
+	},
+	"variables": {
+	},
+	"resources": [
+		{
+			"name": "[parameters('resourceGroup')]",
+			"type": "Microsoft.Resources/resourceGroups",
+			"apiVersion": "2022-12-01",
+			"location": "eastus",
+			"dependsOn": [],
+			"tags": {}
+		}
+	],
+	"outputs": {
+	}
+}

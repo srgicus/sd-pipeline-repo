@@ -40,14 +40,6 @@
 	},
 	"resources": [
 		{
-			"name": "sd-pipeline-rg",
-			"type": "Microsoft.Resources/resourceGroups",
-			"apiVersion": "2022-12-01",
-			"location": "eastus",
-			"dependsOn": [],
-			"tags": {}
-		},
-		{
 			"name": "linkedTemplate",
 			"type": "Microsoft.Resources/deployments",
 			"apiVersion": "2021-04-01",
