@@ -4,13 +4,15 @@
 # https://aka.ms/yaml
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
@@ -20,5 +22,5 @@ steps:
     resourceGroupName: 'sd-pipeline-rg'
     location: 'Canada Central'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/srgicus/sd-pipeline-repo/main/create_web_app/azuredeploy.json?token=GHSAT0AAAAAACBX662OT3RLQO2CUN52XAK4ZCEOTOQ'
+    csmFileLink: 'https://raw.githubusercontent.com/srgicus/sd-pipeline-repo/main/create_web_app/azuredeploy.json'
     deploymentMode: 'Incremental'
