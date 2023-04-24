@@ -15,12 +15,14 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'Visual Studio(7baa5925-804a-4753-8488-7ebaf146bea8)'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure Service Connection'
     subscriptionId: '7baa5925-804a-4753-8488-7ebaf146bea8'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'sd-pipeline-rg'
-    location: 'East US'
+    location: 'Canada Central'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/srgicus/sd-pipeline-repo/main/create_web_app/azuredeploy.json?token=GHSAT0AAAAAACBX662OT3RLQO2CUN52XAK4ZCEOTOQ'
-    overrideParameters: '-projectName sd-deployment-repo2'
     deploymentMode: 'Incremental'
-    deploymentName: 'Deploy Pipeline Template'
